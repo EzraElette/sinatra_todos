@@ -2,7 +2,7 @@
   <header>
     <h2>Editing: <%= @list[:name] %></h2>
     <ul>
-      <form action="/lists/<%= @index %>/destroy" method="post">
+      <form class="delete" action="/lists/<%= @index %>/destroy" method="post">
         <button type="submit" class="delete">Delete List</button>
       </form>
     </ul>
