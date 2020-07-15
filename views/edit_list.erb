@@ -1,0 +1,24 @@
+<section id="todos">
+  <header>
+    <h2>Editing: <%= @list[:name] %></h2>
+    <ul>
+      <form action="/lists/<%= @index %>/destroy" method="post">
+        <button type="submit" class="delete">Delete List</button>
+      </form>
+    </ul>
+  </header>
+</section>
+<form action="/lists/<%= @index %>" method="POST">
+  <dl>
+    <dt>
+      <label for="list_name">Enter a new name for your list:</label>
+    </dt>
+    <dd>
+      <input name="list_name" placeholder="<%= @list[:name] %>" type="text" value="">
+    </dd>
+  </dl>
+  <fieldset class="actions">
+    <input type="submit" value="Save">
+    <a href="/lists/<%= @index %>">Cancel</a>
+  </fieldset>
+</form>
